@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 composable("/home"){
                     HomeScreen(
                         screenOne = {navController.navigate("/F1Q1")},
-                        screenTwo = {navController.navigate("/PLQ1")}
+                        screenTwo = {navController.navigate("/F2Q1")}
                         )
                 }
                 composable("/wrongAnswer"){

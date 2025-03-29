@@ -3,6 +3,7 @@ package com.example.treasurehunt.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -15,25 +16,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.treasurehunt.models.ButtonText
+import com.example.treasurehunt.models.QuestionText
+import com.example.treasurehunt.models.SwitchScreenButton
 
 @Composable
 fun TreasureScreen(goHome: () -> Unit
 ){
     Column(
         modifier = Modifier.fillMaxSize()
-            .background(Color(0x99009900)),
+            .background(Color(0xFF66BB6A)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        Text("Meus Parabéns, você achou o tesouro")
-        Text("Tesouro*")
-        Button(onClick = goHome,
-            modifier = Modifier
-                .padding(1.dp)
-                .size(200.dp, 75.dp),
-            shape = RoundedCornerShape(4.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0x77007700)
-        ) ) { Text("Início") }
+        QuestionText("Meus Parabéns, você achou o tesouro")
+        QuestionText("Tesouro*")
+
+        SwitchScreenButton("Início", goHome)
     }
 }

@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import com.example.treasurehunt.models.QuestionText
 import com.example.treasurehunt.models.SwitchScreenButton
 
 @Composable
@@ -24,11 +25,11 @@ fun TipQuestionScreen(
 
     Column(
         modifier = Modifier.fillMaxSize()
-            .background(Color(0x99009900)),
+            .background(Color(0xFF66BB6A)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Text(question)
+        QuestionText(question)
 
         when (rightAnswer) {
             1 -> {SwitchScreenButton(answerOne, rightScreen)

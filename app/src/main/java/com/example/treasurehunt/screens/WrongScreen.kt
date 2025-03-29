@@ -15,24 +15,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.example.treasurehunt.models.ButtonText
+import com.example.treasurehunt.models.QuestionText
+import com.example.treasurehunt.models.SwitchScreenButton
 
 @Composable
 fun WrongScreen( goBack: () -> Unit ){
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0x99009900)),
+            .background(Color(0xFF66BB6A)),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        Text("Ruim no joguinho, volta ai parceiro")
-        Button(onClick = goBack,
-            modifier = Modifier
-                .padding(1.dp)
-                .size(100.dp, 75.dp),
-            shape = RoundedCornerShape(4.dp),
-            colors = ButtonDefaults.buttonColors(containerColor = Color(0x77007700))
-        ) { Text("Voltar") }
+        QuestionText("Ruim no joguinho, volta ai parceiro")
+        SwitchScreenButton("Voltar", goBack)
     }
 }
