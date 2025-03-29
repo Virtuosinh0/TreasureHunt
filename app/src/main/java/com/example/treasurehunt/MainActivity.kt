@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                 composable("/wrongAnswer"){
                     WrongScreen(goBack = {navController.navigateUp()})
                 }
-                composable("/wrongAnswer"){
+                composable("/treasureFound"){
                     TreasureScreen(goHome = {navController.navigate("/home")})
                 }
                 composable("/F1Q1") {
